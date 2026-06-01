@@ -1,12 +1,13 @@
 import requests
+import os
 import time
 import logging
 from datetime import datetime
 
 # Konfiguracija
 SERVICE_URL = "http://13.217.213.8:777/greeting"
-SLACK_BOT_TOKEN = "xoxb-11237836384599-11257003422564-jDQKQZ3swLQx0UlMpQm0wM1v"
-SLACK_CHANNEL_ID = "C0B78UK9ATD"
+SLACK_BOT_TOKEN = os.environ.get("SLACK_BOT_TOKEN")
+SLACK_CHANNEL_ID = os.environ.get("SLACK_CHANNEL_ID", "C0B78UK9ATD")
 CHECK_INTERVAL = 30  # sekundi
 
 # Logging
