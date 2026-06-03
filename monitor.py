@@ -5,7 +5,7 @@ import logging
 from datetime import datetime
 
 # Konfiguracija
-SERVICE_URL = "http://13.217.213.8:777/greeting"
+SERVICE_URL = "http://98.82.179.163:777/greeting"
 SLACK_BOT_TOKEN = os.environ.get("SLACK_BOT_TOKEN")
 SLACK_CHANNEL_ID = os.environ.get("SLACK_CHANNEL_ID", "C0B78UK9ATD")
 CHECK_INTERVAL = 30  # sekundi
