@@ -2,7 +2,7 @@
 
 A lightweight external uptime monitor for the [gs-rest-service](https://github.com/kenze-p/gs-rest-service) project. Runs as an independent Python script that polls the service's health and posts a Slack alert whenever its status changes.
 
-## Why an external monitor
+## Why an External Monitor
 
 The main project already includes infrastructure-level monitoring (Prometheus, Grafana, Node Exporter) running on the same server as the application. That setup can't report an outage if the whole server goes down — it goes down with it.
 
@@ -11,7 +11,7 @@ This script runs separately (e.g. on a different machine) and checks the service
 ## How It Works
 
 - Polls a configured endpoint every 30 seconds
-- Sends a Slack message only when the status **changes** (up → down or down → up), not on every check
+- Sends a Slack message only when the status changes (up → down or down → up), not on every check
 - Logs every check to both the console and a local `monitor.log` file
 
 ```
@@ -48,4 +48,4 @@ python monitor.py
 
 ## Project Status
 
-The URL currently in the script points to an EC2 instance that has since been decommissioned as part of the companion `gs-rest-service` project's cost cleanup, so the target is not currently live. The script itself is fully functional against any HTTP endpoint — update `SERVICE_URL` to point it at a running service.
+The URL currently in the script points to an EC2 instance that has since been decommissioned as part of the companion [gs-rest-service](https://github.com/kenze-p/gs-rest-service) project's cost cleanup, so the target is not currently live. The script itself is fully functional against any HTTP endpoint — update `SERVICE_URL` to point it at a running service.
